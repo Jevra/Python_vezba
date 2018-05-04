@@ -50,8 +50,9 @@ while temp is not None:
 
 stack.pop()
 stack.pop()
+stack.pop()
 
-print("Pop 2 times: ")
+print("Pop 3 times: ")
 temp = stack.head
 while temp is not None:
     print(temp.read_information())
