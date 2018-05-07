@@ -1,4 +1,4 @@
-from vezba.structures import Stack, Node, List, Queue
+from vezba.structures import Stack, Node, List, Queue, Tree, NodeTree
 
 
 listOfInformation = [1, 2, 3, 4, 5]
@@ -73,3 +73,41 @@ temp = queue.head
 while temp is not None:
     print(temp.read_information())
     temp = temp.next
+
+
+myTree = Tree()
+myTree.add_node(8)
+myTree.add_node(3)
+myTree.add_node(10)
+myTree.add_node(1)
+myTree.add_node(6)
+myTree.add_node(4)
+myTree.add_node(7)
+myTree.add_node(14)
+myTree.add_node(13)
+
+print("My tree in preorder: ")
+myTree.pre_order(myTree.root)
+print("My tree in inorder: ")
+myTree.in_order(myTree.root)
+
+print("Removing element '1'")
+myTree.remove_node(1)
+print("My tree in preorder: ")
+myTree.pre_order(myTree.root)
+
+print("Removing element '14'")
+myTree.remove_node(14)
+print("My tree in preorder: ")
+myTree.pre_order(myTree.root)
+
+
+myTree.add_node(1)
+
+print("Removing element '3'")
+myTree.remove_node(3)
+print("My tree in preorder: ")
+myTree.pre_order(myTree.root)
+
+print("Removing element '14' again!")
+myTree.remove_node(14)
