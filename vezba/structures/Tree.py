@@ -6,6 +6,7 @@ class Tree(TreeInterface):
 
     def __init__(self):
         self.root = None
+        self.preorderList = []
 
     def add_node(self, information):
 
@@ -34,6 +35,7 @@ class Tree(TreeInterface):
     def pre_order(self, node):
         if node is not None:
             print(node.information)
+            self.preorderList.append(node.information)
             self.pre_order(node.left)
             self.pre_order(node.right)
 
@@ -67,6 +69,8 @@ class Tree(TreeInterface):
         if node is None:
             print("There is no node with " + str(info) + " information!")
             return
+        else:
+            self.preorderList.remove(node.information)
 
         # if node has no child nodes
         if node.right is None and node.left is None:
@@ -75,6 +79,7 @@ class Tree(TreeInterface):
                     node.parent.left = None
                 else:
                     node.parent.right = None
+
                 del node
             else:
                 self.root = None
@@ -94,6 +99,7 @@ class Tree(TreeInterface):
                 else:
                     node.parent.right = n
                     n.parent = node.parent
+
                 del node
             # if it is root node
             else:
