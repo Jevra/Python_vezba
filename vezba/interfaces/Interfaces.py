@@ -23,3 +23,21 @@ class QueueInterface(object):
 
     def remove(self):
         raise NotImplementedError
+
+
+class TreeInterface(object):
+
+    def add_node(self, element):
+        raise NotImplementedError
+
+    def remove_node(self):
+        raise NotImplementedError
+
+    def pre_order(self):
+        raise NotImplementedError
+
+    def in_order(self):
+        raise NotImplementedError
+
+    def post_order(self):
+        raise NotImplementedError
