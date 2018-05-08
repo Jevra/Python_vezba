@@ -1,4 +1,5 @@
 from vezba.structures import Stack, Node, List, Queue, Tree, NodeTree
+from properties.Properties import Celsius
 
 
 listOfInformation = [1, 2, 3, 4, 5]
@@ -111,3 +112,9 @@ myTree.pre_order(myTree.root)
 
 print("Removing element '14' again!")
 myTree.remove_node(14)
+
+
+c = Celsius()
+c.temperature = 30
+print(str(c.temperature))
+c.temperature = -274
