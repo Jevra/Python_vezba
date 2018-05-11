@@ -1,3 +1,5 @@
+import vezba.structures.mins
+
 def echo(message):
     print(message)
 

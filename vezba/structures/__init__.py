@@ -4,3 +4,4 @@ from .Stack import Stack
 from .Queue import Queue
 from .NodeTree import NodeTree
 from .Tree import Tree
+from .mins import *
